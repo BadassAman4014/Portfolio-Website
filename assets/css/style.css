@@ -232,7 +232,7 @@ header .navbar ul li a:hover {
   color: #ff7b00;
 }
 .home .content p {
-  font-size: 2.5rem;
+  font-size: 3 rem;
   color: #000;
   font-weight: 600;
   padding: 1rem 0;
@@ -665,7 +665,12 @@ header .navbar ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin: 2rem;
+  margin: 2rem auto;
+  justify-content: center;
+}
+.work .box-container:nth-of-type(1),
+.work .box-container:nth-of-type(2) {
+  justify-content: flex-start;
 }
 .work .box-container .box {
   flex: 1 1 30rem;
@@ -674,6 +679,22 @@ header .navbar ul li a:hover {
   position: relative;
   overflow: hidden;
   height: 30rem;
+}
+
+/* keep single-item center rows from stretching too wide; match other boxes */
+.work .box-container.center-row .box {
+  /* simulate width as if there were 3 items in a row: (100% - total-gaps)/3
+     existing gap between boxes is 1.5rem -> two gaps = 3rem */
+  flex: 1 1 calc((100% - 3rem) / 3);
+  max-width: calc((100% - 3rem) / 3);
+}
+
+@media (max-width: 768px) {
+  /* on smaller screens make the centered box full width like others */
+  .work .box-container.center-row .box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 .work .box-container .box img {
   height: 100%;

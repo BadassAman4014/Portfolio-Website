@@ -15,6 +15,23 @@ $(document).ready(function(){
             document.querySelector('#scroll-top').classList.remove('active');
         }
     });
+
+    /* Filter functionality */
+    $('.filter-btn').click(function(){
+        const filter = $(this).data('filter');
+        
+        // Update active button
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+        
+        // Filter cards
+        if(filter === 'all'){
+            $('.experience-card').removeClass('hidden');
+        } else {
+            $('.experience-card').addClass('hidden');
+            $('.experience-card[data-category="' + filter + '"]').removeClass('hidden');
+        }
+    });
 });
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
@@ -27,7 +44,12 @@ const srtop = ScrollReveal({
 
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline',{delay: 400});
-srtop.reveal('.experience .timeline .container',{interval: 400}); 
+srtop.reveal('.experience .timeline .container',{interval: 400});
+
+/* SCROLL EXPERIENCE PAGE CARDS */
+srtop.reveal('.experience-page .page-title', {delay: 200});
+srtop.reveal('.filter-container', {delay: 400});
+srtop.reveal('.experience-card', {interval: 200});
 
 
 // // Start of Tawk.to Live Chat
