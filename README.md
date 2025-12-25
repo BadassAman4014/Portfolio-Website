@@ -1,7 +1,4 @@
 # Hi there, I'm Aman Raut 👋
-
-![Profile](assets/images/profile2.jpg)
-
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-blue?style=for-the-badge&logo=github)](https://badassaman4014.github.io/Portfolio-Website/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aman-raut-663484246/)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amanraut8263@gmail.com)
